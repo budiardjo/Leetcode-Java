@@ -1,7 +1,7 @@
-class MainRemoveDuplicates {
+class RemoveDuplicates {
 
     public static void main(String[] args){
-        MainRemoveDuplicates mn = new MainRemoveDuplicates();
+        RemoveDuplicates mn = new RemoveDuplicates();
         int[] intArray =  {1,1,2};
         int result = mn.removeDuplicates(intArray);
         System.out.println(result);

@@ -2,5 +2,8 @@
 
 Leet code using java that can run locally
 
+## Fundamental Data Structures
+ 
 Array
-1. two sum
+two sum
+remove duplicates from sorted array

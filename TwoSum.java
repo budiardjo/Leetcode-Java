@@ -2,9 +2,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-class MainTwoSum {
+class TwoSum {
     public static void main(String[] args){
-        MainTwoSum mn = new MainTwoSum();
+        TwoSum mn = new TwoSum();
         int[] intArray =  {2,7,13,15};
         int[] result = mn.twoSum(intArray, 20);
         System.out.println(Arrays.toString(result));
