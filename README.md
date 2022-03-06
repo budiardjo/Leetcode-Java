@@ -4,7 +4,7 @@ Leet code using java that can run locally
 
 ## Fundamental Data Structures
 
-### Array
+### Array 101
 
-two sum\
-remove duplicates from sorted array
+Find Max Consecutive One.<br>
+

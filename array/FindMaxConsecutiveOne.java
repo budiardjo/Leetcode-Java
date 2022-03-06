@@ -1,6 +1,4 @@
-package array101;
-
-class findMaxConsecutiveOne {
+public class FindMaxConsecutiveOne {
     public int findMaxConsecutiveOnes(int[] nums) {
         if (null == nums){
             return 0;
@@ -23,11 +21,10 @@ class findMaxConsecutiveOne {
     }
     
     public static void main(String[] args){
-        findMaxConsecutiveOne mn = new findMaxConsecutiveOne();
+        FindMaxConsecutiveOne mn = new FindMaxConsecutiveOne();
         int[] intArray =  {1,1,0,1,1,1};
         int result = mn.findMaxConsecutiveOnes(intArray);
         System.out.println(result);
     }
-
 
 }
