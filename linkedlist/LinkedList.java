@@ -1,11 +1,11 @@
-package LeetCodeLinkedList;
+package linkedlist;
 
 public class LinkedList {
     public Node head;
     public Node tail;
     public int size;
 
-    public void createLL(int nodeValue) {
+    public void creatLL(int nodeValue) {
         Node newNode = new Node();
         newNode.value = nodeValue;
         newNode.next = null;
@@ -15,12 +15,6 @@ public class LinkedList {
     }
 
     public void insertNode(int nodeValue) {
-        if ( head == null) {
-            createLL(nodeValue);
-            return;
-        }
-
-        
         Node newNode = new Node();
         newNode.value = nodeValue;
         newNode.next = null;
@@ -34,7 +28,7 @@ public class LinkedList {
         for(int i = 0; i < size; i++) {
             System.out.println(tempNode.value);
             if ( i != size -1 ) {
-                System.out.print(" -> ");
+                System.out.println(" -> ");
             
             }
             tempNode = tempNode.next;
@@ -43,4 +37,3 @@ public class LinkedList {
 
     }
 }
-
