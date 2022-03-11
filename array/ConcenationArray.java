@@ -1,14 +1,28 @@
 import java.util.Arrays;
 
 class ConcatenationArray{
+    // public int[] getConcatenation(int[] nums) {
+    //     System.out.println(Arrays.toString(nums));
+    //     int n = nums.length;
+    //     int[] ans = new int[n * 2]; // 3 * 2 = 6 // 
+
+    //     for (int i = 0; i < n * 2; i++) {
+    //         ans[i] = nums[i % n]; // 1 mod 6 = 1
+    //         System.out.println(Arrays.toString(ans));
+    //     }
+    //     return ans;
+    // }
+
     public int[] getConcatenation(int[] nums) {
-        int n = nums.length;
-        int ans[] = new int[n * 2];
-        
-        for (int i = 0; i < n * 2; i++) {
-            ans[i] = nums[i % n];
+        int[] result = new int[nums.length * 2];
+        System.out.println(nums.length);
+        for(int i = 0; i < nums.length; i++) {
+            result[i] = nums[i];
+            System.out.println(Arrays.toString(result));
+
+            result[i + nums.length] = nums[i]; // set index of result to value in nums, and mirror
         }
-        return ans;
+        return result;
     }
 
     public static void main (String[] args) {
