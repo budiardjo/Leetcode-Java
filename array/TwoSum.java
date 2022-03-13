@@ -15,23 +15,35 @@ class TwoSum {
     //     throw new IllegalArgumentException("No solution found");
     // }
     
-    public int[] twoSum(int[] numbers, int target) {
-        Map<Integer, Integer> value2index = getMapping(numbers);
-        for(int index = 0; index < numbers.length; index++){
-            int required = target - numbers[index];
-            if ( value2index.containsKey(required) && value2index.get(required) != index) {
-                return new int[] {index, value2index.get(required)};
-            }
-        }
-        return new int[0];
-    }
+    // public int[] twoSum(int[] numbers, int target) {
+    //     Map<Integer, Integer> value2index = getMapping(numbers);
+    //     for(int index = 0; index < numbers.length; index++){
+    //         int required = target - numbers[index];
+    //         if ( value2index.containsKey(required) && value2index.get(required) != index) {
+    //             return new int[] {index, value2index.get(required)};
+    //         }
+    //     }
+    //     return new int[0];
+    // }
 
-    public Map<Integer, Integer> getMapping(int[] array) {
-        Map<Integer, Integer> result = new HashMap<>();
-        for (int index = 0; index < array.length; index++) {
-            result.put(array[index], index);
+    // public Map<Integer, Integer> getMapping(int[] array) {
+    //     Map<Integer, Integer> result = new HashMap<>();
+    //     for (int index = 0; index < array.length; index++) {
+    //         result.put(array[index], index);
+    //     }
+    //     return result;
+    // }
+
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> numMap = new HashMap<>();
+        for ( int i = 0; i < nums.length; i++) {
+            int compliment = target - nums[i];
+            if (numMap.containsKey(compliment)) {
+                return new int[] {numMap.get(compliment), i};
+            }
+            numMap.put(nums[i], i);
         }
-        return result;
+        throw new IllegalArgumentException("no match found!");
     }
 
 
