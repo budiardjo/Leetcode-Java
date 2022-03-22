@@ -4,7 +4,7 @@ public class MaxSumSubArraySW {
         int windowStart = 0;
         for ( int windowEnd = 0; windowEnd < array.length; windowEnd++) {
             windowSum += array[windowEnd];
-
+            
             if ( windowEnd >= k - 1 ); {
                 maxSum = Math.max(maxSum, windowSum);
                 windowSum -= array[windowStart];

@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 class MaxSumSubArray {
     public int findMaxSumSubArray(int k, int[] array) {
         int maxSum = 0, windowSum;
